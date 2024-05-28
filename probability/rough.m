@@ -1,0 +1,21 @@
+% in = [0.8 0.2];
+% tr = [0.7 0.3; 0.4 0.6];
+% em = [0.2 0.4 0.4; 0.5 0.4 0.1];
+% states = ["rainy","sunny"];
+% ob_sp = ["I" "C" "T"];
+% ob_sequence = ["T" "I" "T"];
+Transition_Probabilities=[0.2 0.5 0.3;0.4 0.3 0.3 ; 0.1 0.5 0.4];
+Emission_Probabilities=[0.7 0.1 0.2;0.3 0.5 0.2;0.2 0.4 0.4];
+States=["Rainy" "Cloudy" "Sunny"];
+Initial_probabilies=[0.29,0.51,0.2];
+Observation_Sequence=["read" "read" "shop" "play" "shop"];
+Observation_Space=["read" "play" "shop"];
+a = Backward_Algo(States,Transition_Probabilities,Emission_Probabilities,Observation_Space,Observation_Sequence);
+
+% init_probs = [0.6, 0.4]; % initial probabilities
+% trans_probs = [0.7, 0.3; 0.4, 0.6]; % transition probabilities
+% emis_probs = [0.1, 0.4, 0.5; 0.6, 0.3, 0.1]; % emission probabilities
+% states = ["state1", "state2"]; % state names
+% obs_seq = ["3","2","3"]; % observation sequence
+% obs_space = ["1", "2", "3"]; % observation space
+% A = Backward_Algo(states,trans_probs,emis_probs,obs_space,obs_seq)
